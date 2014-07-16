@@ -89,8 +89,11 @@ def countryyear(code='iso3c', years=list(range(1990,2013))):
     else:
         codes = data[code]
         out = pd.DataFrame(list(zip(list(range(len(codes))), codes)), columns=['idx', code])
-        out[code][out[code]==''] = None
         out = out.dropna()
+        try:
+            out[code][out[code]==''] = None
+        except:
+            pass
         out = [out.copy() for x in years]
         for i,v in enumerate(years):
             out[i]['year'] = v
