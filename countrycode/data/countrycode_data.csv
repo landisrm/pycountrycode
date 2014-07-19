@@ -3,7 +3,7 @@ Afghanistan,AFG,700,2,AF,512,AFG,AF,AFG,4,4,AFG,afghan,Asia,Southern Asia
 Aland Islands,,,,,,,AX,ALA,248,248,ALA,\b(a|å)land,Europe,Northern Europe
 Albania,ALB,339,3,AL,914,ALB,AL,ALB,8,8,ALB,albania,Europe,Southern Europe
 Algeria,ALG,615,4,AG,612,ALG,DZ,DZA,12,12,DZA,algeria,Africa,Northern Africa
-American Samoa,,,,AS,859,ASA,AS,ASM,16,16,ASM,^(?=.*americ).*samoa,Oceania,Polynesia
+American Samoa,,,,AQ,859,ASA,AS,ASM,16,16,ASM,^(?=.*americ).*samoa,Oceania,Polynesia
 Andorra,AND,232,6,AN,,AND,AD,AND,20,20,ADO,andorra,Europe,Southern Europe
 Angola,ANG,540,7,AO,614,ANG,AO,AGO,24,24,AGO,angola,Africa,Middle Africa
 Anguilla,,,,AV,312,AIA,AI,AIA,660,660,AIA,anguill?a,Americas,Caribbean
@@ -203,10 +203,10 @@ Saint Barthelemy,,,,,,,BL,BLM,652,652,BLM,barth(e|é)lemy,Americas,Caribbean
 "Saint Helena, Ascension and Tristan da Cunha",,,,SH,856,,SH,SHN,654,654,SHN,helena,Africa,Western Africa
 Saint Kitts and Nevis,SKN,60,188,SC,361,SKN,KN,KNA,659,659,KNA,kitts|\bnevis,Americas,Caribbean
 Saint Lucia,SLU,56,189,ST,362,LCA,LC,LCA,662,662,LCA,\blucia,Americas,Caribbean
-Saint Martin (French part),,,,,352,,MF,MAF,663,663,MAF,^(?=.*collectivity).*martin|^(?=.*france).*martin|^(?=.*french).*martin,Americas,Caribbean
+Saint Martin (French part),,,,,,,MF,MAF,663,663,MAF,^(?=.*collectivity).*martin|^(?=.*france).*martin|^(?=.*french).*martin,Americas,Caribbean
 Saint Pierre and Miquelon,,,,,363,,PM,SPM,666,666,SPM,miquelon,Americas,Northern America
 Saint Vincent and the Grenadines,SVG,57,191,VC,364,VIN,VC,VCT,670,670,VCT,vincent,Americas,Caribbean
-Samoa,WSM,990,244,SM,862,SAM,WS,WSM,882,882,WSM,^(?!.*amer).*samoa,Oceania,Polynesia
+Samoa,WSM,990,244,WS,862,SAM,WS,WSM,882,882,WSM,^(?!.*amer).*samoa,Oceania,Polynesia
 San Marino,SNM,331,192,SM,135,SMR,SM,SMR,674,674,SMR,san.?marino,Europe,Southern Europe
 Sao Tome and Principe,STP,403,193,TP,716,STP,ST,STP,678,678,STP,\bs(a|ã)o.?tom(e|é),Africa,Middle Africa
 Saudi Arabia,SAU,670,194,SA,456,KSA,SA,SAU,682,682,SAU,\bsa\w*.?arabia,Asia,Western Asia
