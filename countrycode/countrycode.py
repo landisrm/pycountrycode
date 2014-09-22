@@ -1,7 +1,7 @@
 import re
 import os
 import pandas as pd
-from copy import copy
+import copy
 from functools import reduce
 
 pkg_dir, pkg_filename = os.path.split(__file__)
@@ -87,7 +87,12 @@ def countrycode(codes=['DZA', 'CAN'], origin='iso3c', target='country_name'):
     if type(codes) in (list, str):
         input_codes = pd.Series(codes)
     elif type(codes) == pd.core.series.Series:
-        input_codes = codes
+        # Make a deep copy.  Note that codes.copy(deep = True) doesn't seem to work.
+        # Deep copy is necessary because if we change an element to NaN (see below)
+        # we don't want that change reflected in the original series.
+        input_codes = pd.Series(data=copy.deepcopy(codes.values.tolist()), 
+                                index=codes.index.copy(),
+                                name=codes.name)
     else:
         raise TypeError('codes must be string, list, or pandas series')
 
@@ -99,15 +104,24 @@ def countrycode(codes=['DZA', 'CAN'], origin='iso3c', target='country_name'):
         origin = 'regex'
 
     # if origin is 'regex', then test for countries which have no match.
-    # replace with NaN.
+    # replace their names with NaN in a temporary copy of input_codes.
     if origin == 'regex':
         # Replace NaN in regex with pattern that won't match anything
         # See http://stackoverflow.com/questions/1723182/a-regex-that-will-never-be-matched-by-anything?lq=1
+
+        # First change NaNs in the regex patterns to an actual regex.
         nevermatch = r'(?!x)x'
         data.regex[pd.isnull(data.regex)] = nevermatch
-        data['regex'] = '(?i)'+ data['regex'] + '.*'
+
+        # Make the regexes case insensitive and ignore text before 
+        # and after the match
+        data['regex'] = '(?i).*'+ data['regex'] + '.*'
+
+        # Find elements of input_codes which don't match any of the regexes
         no_match = find_nomatch(input_codes, data['regex'])
-        input_codes[no_match] = None
+        input_codes[no_match] = None 
+        # Prevents pd.Series.replace from returning the unmatched element.  Returns
+        # NaN instead.
     
     # What does the first dictionary statement do?  isn't it immediately changed?
     #dictionary = data[[origin, target]].dropna()
