@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import re
 import os
 import pandas as pd
@@ -12,7 +14,7 @@ data = pd.read_csv(data_path, encoding='utf-8')
 data.iso2c[data.iso3c == 'NAM'] = 'NA'
 
 # Make regexes case insensitive and ignore text after the end
-data.regex =  '(?i)' + data.regex + '.*'
+data.regex =  ur'(?i)' + data.regex + '.*'
 
 # Replace NaN in regex with pattern that won't match anything
 # See http://stackoverflow.com/questions/1723182/a-regex-that-will-never-be-matched-by-anything?lq=1
@@ -103,7 +105,7 @@ def countrycode(sourcevar, origin, destination, warn=True):
 
         # For each regex in the dictionary, find matches
         for k in dictionary.keys():
-            matches = in_names.str.match(k, as_indexer=True)
+            matches = in_names.str.contains(k)
             destination_vector[matches] = dictionary[k]
 
             # Keep track of keys matched more than once
@@ -116,13 +118,13 @@ def countrycode(sourcevar, origin, destination, warn=True):
     if warn:
         nomatch = in_names[pd.isnull(destination_vector)]
         if len(nomatch) > 0:
-            warnings.warn('Some values were not matched:\n' +
-                              '; '.join(s.encode('utf-8') for s in nomatch.values))
+            nomatch_text = '; '.join(nomatch)
+            print 'countrycode: some values were not matched:\n\t{}\n'.format(nomatch_text) 
 
-        if origin == 'regex':
+        if origin == 'regex' and len(dup_matches) > 0:
             dup_text = '\n'.join('{} = {}'.format(key, val) for (key, val) in dup_matches.items())
-            warnings.warn('Some regex patterns matched more than one value:\n' +
-                              dup_text)
+            print 'countrycode: some regex patterns matched more than one value:\n\t{}\n'.format(dup_text)
+
     # end if warn
 
     if type(sourcevar) == list:
