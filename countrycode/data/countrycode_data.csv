@@ -62,7 +62,7 @@ Cuba,Cuba,Cuba,CUB,40,49,CU,928,CUB,CU,CUB,192,192,CUB,\bcuba,Americas,Caribbean
 Curaçao,Curaçao,Curacao,,,,UC,354,,CW,CUW,531,531,CUW,^(?!.*bonaire).*\bcura(c|ç)ao,Americas,Caribbean
 Cyprus,Cyprus,Cyprus,CYP,352,50,CY,423,CYP,CY,CYP,196,196,CYP,cyprus,Asia,Western Asia
 Czech Rep.,Czech Republic,Czech Republic,CZR,316,167,EZ,935,CZE,CZ,CZE,203,203,CZE,^(?=.*rep).*czech|czechia|bohemia,Europe,Eastern Europe
-Czechoslovakia,,Czechoslovakia,CZE,315,,,934,TCH,CS,CSK,200,,,czecho.?slovakia,,
+Czechoslovakia,,Czechoslovakia,CZE,315,,,934,TCH,CS,CSK,200,,,.*czecho.?slovakia,,
 Denmark,Denmark,Denmark,DEN,390,54,DA,128,DEN,DK,DNK,208,208,DNK,denmark,Europe,Northern Europe
 Djibouti,Djibouti,Djibouti,DJI,522,72,DJ,611,DJI,DJ,DJI,262,262,DJI,djibouti,Africa,Eastern Africa
 Dominica,Dominica,Dominica,DMA,54,55,DO,321,DMA,DM,DMA,212,212,DMA,dominica(?!n),Americas,Caribbean
@@ -117,7 +117,7 @@ Iraq,Iraq,Iraq,IRQ,645,103,IZ,433,IRQ,IQ,IRQ,368,368,IRQ,\biraq|mesopotamia,Asia
 Ireland,Ireland,Ireland,IRE,205,104,EI,178,IRL,IE,IRL,372,372,IRL,ireland,Europe,Northern Europe
 Isle of Man,Isle of Man,Isle of Man,,,,IM,,,IM,IMN,833,833,IMY,^(?=.*isle).*\bman,Europe,Northern Europe
 Israel,Israel,Israel,ISR,666,105,IS,436,ISR,IL,ISR,376,376,ISR,israel,Asia,Western Asia
-Italy,Italy,Italy,ITA,325,106,IT,136,ITA,IT,ITA,380,380,ITA,italy,Europe,Southern Europe
+Italy,Italy,Italy,ITA,325,106,IT,136,ITA,IT,ITA,380,380,ITA,.*italy,Europe,Southern Europe
 Jamaica,Jamaica,Jamaica,JAM,51,109,JM,343,JAM,JM,JAM,388,388,JAM,jamaica,Americas,Caribbean
 Japan,Japan,Japan,JPN,740,110,JA,158,JPN,JP,JPN,392,392,JPN,japan,Asia,Eastern Asia
 Jersey,Jersey,Jersey,,,,,,,JE,JEY,832,832,JEY,jersey,Europe,Northern Europe
@@ -171,7 +171,7 @@ Nepal,Nepal,Nepal,NEP,790,149,NP,558,NEP,NP,NPL,524,524,NPL,nepal,Asia,Southern 
 Netherlands,Netherlands,Netherlands,NTH,210,150,NL,138,NED,NL,NLD,528,528,NLD,^(?!.*\bant)(?!.*\bcarib).*netherlands,Europe,Western Europe
 Netherlands Antilles,,Netherlands Antilles,,,,,353,AHO,AN,ANT,530,,ANT,^(?=.*\bant).*(nether|dutch),Americas,Caribbean
 New Caledonia,New Caledonia,New Caledonia,,,,NC,839,,NC,NCL,540,540,NCL,new.?caledonia,Oceania,Melanesia
-New Zealand,New Zealand,New Zealand,NEW,920,156,NZ,196,NZL,NZ,NZL,554,554,NZL,(new)?.?zealand,Oceania,Australia and New Zealand
+New Zealand,New Zealand,New Zealand,NEW,920,156,NZ,196,NZL,NZ,NZL,554,554,NZL,(new|n)?.? *zealand,Oceania,Australia and New Zealand
 Nicaragua,Nicaragua,Nicaragua,NIC,93,157,NU,278,NCA,NI,NIC,558,558,NIC,nicaragua,Americas,Central America
 Niger,Niger,Niger,NIR,436,158,NG,692,NIG,NE,NER,562,562,NER,\bniger(?!ia),Africa,Western Africa
 Nigeria,Nigeria,Nigeria,NIG,475,159,NI,694,NGR,NG,NGA,566,566,NGA,nigeria,Africa,Western Africa
@@ -207,7 +207,7 @@ St. Pierre and Miquelon,Saint Pierre and Miquelon,Saint Pierre and Miquelon,,,,,
 St. Vincent and the Grenadines,Saint Vincent and the Grenadines,Saint Vincent and the Grenadines,SVG,57,191,VC,364,VIN,VC,VCT,670,670,VCT,vincent,Americas,Caribbean
 Samoa,Samoa,Samoa,WSM,990,244,WS,862,SAM,WS,WSM,882,882,WSM,^(?!.*amer).*samoa,Oceania,Polynesia
 San Marino,San Marino,San Marino,SNM,331,192,SM,135,SMR,SM,SMR,674,674,SMR,san.?marino,Europe,Southern Europe
-Sao Tome and Principe,Sao Tome and Principe,Sao Tome and Principe,STP,403,193,TP,716,STP,ST,STP,678,678,STP,\bs(a|ã)o.?tom(e|é)(.*),Africa,Middle Africa
+Sao Tome and Principe,Sao Tome and Principe,Sao Tome and Principe,STP,403,193,TP,716,STP,ST,STP,678,678,STP,s[aã]o.*tom[eé],Africa,Middle Africa
 Saudi Arabia,Saudi Arabia,Saudi Arabia,SAU,670,194,SA,456,KSA,SA,SAU,682,682,SAU,\bsa\w*.?arabia,Asia,Western Asia
 Saxony,,Saxony,SAX,269,,,,,,,,,,saxony,,
 Senegal,Senegal,Senegal,SEN,433,195,SG,722,SEN,SN,SEN,686,686,SEN,senegal,Africa,Western Africa
@@ -224,7 +224,7 @@ Somalia,Somalia,Somalia,SOM,520,201,SO,726,SOM,SO,SOM,706,706,SOM,somali,Africa,
 South Africa,South Africa,South Africa,SAF,560,202,SF,199,RSA,ZA,ZAF,710,710,ZAF,\bs(\.|outh).*africa,Africa,Southern Africa
 South Georgia and the South Sandwich Is.,,South Georgia and the South Sandwich Islands,,,,,,,GS,SGS,239,,SGS,south.?georgia|sandwich,,
 South Sudan,South Sudan,South Sudan,SSD,626,277,OD,733,,SS,SSD,728,728,SSD,\bs\w*.?sudan,Africa,Northern Africa
-Soviet Union,,Soviet Union,,,,,,,SU,SUN,810,,,soviet.?union|u\.?s\.?s\.?r|socialist.?republics,,
+Soviet Union,,Soviet Union,,,,,,,SU,SUN,810,,,.*soviet.?union|u\.?s\.?s\.?r|socialist.?republics,,
 Spain,Spain,Spain,SPN,230,203,SP,184,ESP,ES,ESP,724,724,ESP,spain,Europe,Southern Europe
 Sri Lanka,Sri Lanka,Sri Lanka,SRI,780,38,CE,524,SRI,LK,LKA,144,144,LKA,sri.?lanka|ceylon,Asia,Southern Asia
 Sudan,Sudan,Sudan,SUD,625,276,SU,732,SUD,SD,SDN,736,729,SDN,^(?!.*\bs(?!u)).*sudan,Africa,Northern Africa
@@ -253,7 +253,7 @@ Two Sicilies,,Two Sicilies,SIC,329,,,,,,,,,,two.?sicilies,,
 Uganda,Uganda,Uganda,UGA,500,226,UG,746,UGA,UG,UGA,800,800,UGA,uganda,Africa,Eastern Africa
 Ukraine,Ukraine,Ukraine,UKR,369,230,UP,926,UKR,UA,UKR,804,804,UKR,ukrain,Europe,Eastern Europe
 UAE,United Arab Emirates,United Arab Emirates,UAE,696,225,AE,466,UAE,AE,ARE,784,784,ARE,emirates|^u\.?a\.?e\.?$|united.?arab.?em,Asia,Western Asia
-United Kingdom,United Kingdom of Great Britain and Northern Ireland,United Kingdom,UKG,200,229,UK,112,GBR,GB,GBR,826,826,GBR,(united.?kingdom|britain|^u\.?k\.?$|GB),Europe,Northern Europe
+United Kingdom,United Kingdom of Great Britain and Northern Ireland,United Kingdom,UKG,200,229,UK,112,GBR,GB,GBR,826,826,GBR,.*(united.?kingdom|britain|^u\.?k\.?$|GB),Europe,Northern Europe
 United States of America,United States of America,United States,USA,2,231,US,111,USA,US,USA,840,840,USA,^(?!.*islands).*united.?states|^u\.?s\.?a\.?$|^u\.?s\.?$,Americas,Northern America
 US Minor Outlying Is.,,United States Minor Outlying Islands,,,,,,,UM,UMI,581,,UMI,minor.?outlying.?is,,
 Uruguay,Uruguay,Uruguay,URU,165,234,UY,298,URU,UY,URY,858,858,URY,uruguay,Americas,South America
@@ -271,7 +271,7 @@ Wuerttemburg,,Wuerttemburg,WRT,271,,,,,,,,,,w(ue|ü)rttemburg,,
 Yemen,Yemen,Yemen,YEM,679,249,YM,474,YEM,YE,YEM,887,887,YEM,^(?!.*arab)(?!.*north)(?!.*sana)(?!.*peo)(?!.*dem)(?!.*south)(?!.*aden)(?!.*\bp\.?d\.?r).*yemen,Asia,Western Asia
 Yemen Arab Republic,,Yemen Arab Republic,YAR,678,,,,YAR,,,,,,^(?=.*arab).*yemen|^(?=.*north).*yemen|^(?=.*sana).*yemen,,
 Yemen PR,,Yemen People's Republic,YPR,680,,,,YMD,YD,YMD,720,,,^(?=.*peo).*yemen|^(?!.*rep)(?=.*dem).*yemen|^(?=.*south).*yemen|^(?=.*aden).*yemen|^(?=.*\bp\.?d\.?r).*yemen,,
-Yugoslavia,,Yugoslavia,YUG,345,,,188,YUG,YU,YUG,,,YUG,yugoslavia,,
+Yugoslavia,,Yugoslavia,YUG,345,,,188,YUG,YU,YUG,,,YUG,.*yugoslavia,,
 Zambia,Zambia,Zambia,ZAM,551,251,ZA,754,ZAM,ZM,ZMB,894,894,ZMB,zambia|northern.?rhodesia,Africa,Eastern Africa
 Zanzibar,,Zanzibar,ZAN,511,,,,,,EAZ,,,,zanz,,
 Zimbabwe,Zimbabwe,Zimbabwe,ZIM,552,181,ZI,698,ZIM,ZW,ZWE,716,716,ZWE,zimbabwe|^(?!.*northern).*rhodesia,Africa,Eastern Africa
