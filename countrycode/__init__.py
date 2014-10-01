@@ -1,2 +1,2 @@
 from .countrycode import countrycode
-from .countrycode import countryyear
+from .countrycode import data
