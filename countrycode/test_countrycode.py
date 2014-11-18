@@ -1,4 +1,7 @@
-from .countrycode import countrycode
+# -*- coding: utf-8
+# Encoding needed for Cote d'Ivoire test. 
+
+from countrycode import countrycode
 
 def test_default():
     assert countrycode() == ['Algeria', 'Canada']
@@ -17,10 +20,14 @@ def test_unicode():
     assert countrycode('DZA', 'iso3c', 'country_name') == 'Algeria'
 
 def test_regex():
+    assert countrycode('Cape Verde', 'regex', 'iso3c') == 'CPV'
+    assert countrycode('Cabo Verde', 'regex', 'iso3c') == 'CPV'
+    assert countrycode("Cote d'Ivoire", 'regex', 'iso3c') == 'CIV'
+    assert countrycode("Côte d'Ivoire", 'regex', 'iso3c') == 'CIV'
     assert countrycode('georgia', 'country_name', 'iso3c') == 'GEO'
     assert countrycode('south georgia', 'country_name', 'iso3c') == 'SGS'
     assert countrycode('serbia', 'country_name', 'iso3c') == 'SRB'
-    assert countrycode('serbia and montenegro', 'country_name', 'iso3c') == 'SRB'
+    assert countrycode('serbia and montenegro', 'regex', 'iso3c') == 'SRB'
     assert countrycode('st. kitts and nevis', 'country_name', 'iso3c') == 'KNA'
     assert countrycode('st. christopher and nevis', 'country_name', 'iso3c') == 'KNA'
     assert countrycode('st. maarten', 'country_name', 'iso3c') == 'SXM'
